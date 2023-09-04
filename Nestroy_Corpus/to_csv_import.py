@@ -22,6 +22,7 @@ with open(input_file_path, "r") as infile:
                     "",
                     row[1].strip()
                 ).strip(),
+                date,
                 date
             ]
         )
