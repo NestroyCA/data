@@ -1,6 +1,8 @@
 import re
 import csv
-new_list = []
+new_list = [
+    ["id", "philological_number", "title", "not_before", "not_after"]
+]
 input_file_path = "Liste Nestroy_Stücke_Historisch.csv"
 output_file_path = "Nestroy_Stücke_import.csv"
 
