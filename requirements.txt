@@ -1,2 +1,2 @@
 acdh_baserow_pyutils==0.5
-data==0.4
+acdh_tei_pyutils==0.32
