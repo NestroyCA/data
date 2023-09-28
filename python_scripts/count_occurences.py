@@ -1,6 +1,6 @@
 import os
 import json
-from config import br_client, BASEROW_DB_ID, JSON_FOLDER
+from data.python_scripts.config import br_client, BASEROW_DB_ID, JSON_FOLDER
 
 os.makedirs(JSON_FOLDER, exist_ok=True)
 json_file_paths = br_client.dump_tables_as_json(
