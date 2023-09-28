@@ -1,0 +1,2 @@
+acdh_baserow_pyutils==0.5
+data==0.4
