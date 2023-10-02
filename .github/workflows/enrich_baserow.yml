@@ -1,0 +1,27 @@
+name: enrich places-basrow with coordinates
+on:
+  # schedule:
+  #   - cron: "33 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  download:
+    name: enrich places-basrow
+    runs-on: ubuntu-latest
+    env:
+      BASEROW_TOKEN: ${{ secrets.BASEROW_TOKEN }}
+      BASEROW_USER: ${{ secrets.BASEROW_USER }}
+      BASEROW_PW: ${{ secrets.BASEROW_PW }}
+    steps:
+      - name: Perfom Checkout
+        uses: actions/checkout@v3
+      - name: Install Python Packages
+        run: pip install -r requirements.txt
+      - name: enrich with counter
+        # updates the data in baserow
+        run: |
+          python enrich_baserow_data.py
+      - name: Commit new data
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Data updated from Baserow

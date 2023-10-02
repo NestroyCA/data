@@ -1,2 +1,3 @@
 acdh_baserow_pyutils==0.5
 acdh_tei_pyutils==0.32
+Requests==2.31.0
