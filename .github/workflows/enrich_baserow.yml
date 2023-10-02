@@ -20,7 +20,7 @@ jobs:
       - name: enrich (with occurence counter)
         # updates the data in baserow
         run: |
-          python ./pyscripts/enrich_baserow_data.py
+          python ./pyscripts/enrich_baserow.py
       - name: Commit new data
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
