@@ -13,9 +13,11 @@ jobs:
     steps:
       - name: Perfom Checkout
         uses: actions/checkout@v3
-      - name: Install Python Packages
+      - name: allow pip to overwrite
         run:
           python -m pip config set global.break-system-packages true
+      - name: Install Python Packages
+        run:
           pip install -r requirements.txt
       - name: enrich (with occurence counter)
         # updates the data in baserow
